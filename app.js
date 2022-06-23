@@ -2,10 +2,10 @@ import express from "express";
 import mongoose from "mongoose";
 
 import key from "./keys.js";
-import authRouter from "./router/auth";
+import authRouter from "./router/auth.js";
 
 const app = express();
-const PORT = 3000 | process.env;
+const PORT = 5000 | process.env;
 
 mongoose
   .connect(key.MONGO_URI, {
@@ -22,5 +22,5 @@ app.use(express.json());
 app.use("/", authRouter);
 
 app.listen(PORT, () => {
-  console.log(`Server started on ${3000}`);
+  console.log(`Server started on ${5000}`);
 });

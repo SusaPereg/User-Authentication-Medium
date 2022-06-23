@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 
-import User from "../model/user";
-import getSignedToken from "../util/signedToken";
+import User from "../model/user.js";
+import getSignedToken from "../util/signedToken.js";
 
 async function createUser(payload) {
   return User.find({ email: payload.email })
